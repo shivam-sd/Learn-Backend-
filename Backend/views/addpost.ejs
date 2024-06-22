@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Post</title>
+    <link rel="stylesheet" href="../stylesheets/addpost.css">
+</head>
+<body>
+    
+<div class="container">
+
+
+
+    <div class="header" style="width: 100%; ">
+
+            <div class="pinters">
+                <a href="/feed">
+                    <h5 style="font-size: 22px; font-weight: 700;">Pintrest</h5>
+                </a>
+            </div>
+            <div class="log">
+                <a href="/profile">
+                    <h5 style="font-size: 18px; ">Profile</h5>
+                </a>
+                <a href="/feed">
+                    <h5 style="font-size: 18px;">Feed</h5>
+                </a>
+                <button class="btnt">Logout</button>
+            </div>
+
+        </div>
+    <div class="main">
+
+        <h1 style="text-align: center;">Create Your Post</h1>
+        
+        <div class="post">
+            <form action="/createpost" method="post" enctype="multipart/form-data"> 
+                
+                <input type="file" name="imagepost" style="color: white;">
+                <br>
+                <input type="text" placeholder="Title" name="title">
+                <br>
+                <textarea name="description" placeholder="Description"></textarea>
+                <br>
+                <button type="submit" class="btn">Post</button>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

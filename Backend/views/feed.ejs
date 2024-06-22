@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: white;
+        }
+
+        .container {
+            width: 100%;
+            padding: 20px;
+            background-color: rgb(80, 75, 75);
+            display: flex;
+            /* align-items: center; */
+            /* justify-content: center; */
+            gap: 10px;
+            flex-wrap: wrap;
+            min-height: 100vh;
+        }
+
+        .card {
+            width: 200px;
+            height: 270px;
+            /* border: 1px solid white; */
+            background-color: rgb(97, 92, 92);
+            border-radius: 10px;
+             padding-bottom: 3px;
+             display: flex;
+             flex-direction: column;
+        }
+
+        .post {
+            width: 200px;
+            height: 200px;
+            /* border: 1px solid white; */
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+
+        h4,
+        h5 {
+            margin-left: 5px;
+            margin-top: 10px;
+        }
+
+        /* .detail{
+            padding: 10px;
+            border: 1px solid red;
+        } */
+        .header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 30px;
+    padding: 15px;
+    padding-left: 60px;
+    background-color: rgb(59, 57, 57);
+    border-radius: 20px;
+}
+.log{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 300px;
+    padding: 8px;
+    
+}
+.btn{
+    border: none;
+    color: white;
+    background-color: red;
+    border-radius: 8px;
+    width: 80px;
+    height: 25px;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: rgb(168, 53, 53);
+}   
+a{
+    text-decoration: none;
+}
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        
+        <div class="header" style="width: 100%; ">
+
+            <div class="pinters">
+                <a href="/feed">
+                    <h5 style="font-size: 22px; font-weight: 700;">Pintrest</h5>
+                </a>
+            </div>
+            <div class="log">
+                <a href="/profile">
+                    <h5 style="font-size: 18px; ">Profile</h5>
+                </a>
+                <a href="/feed">
+                    <h5 style="font-size: 18px;">Feed</h5>
+                </a>
+                <button class="btn">Logout</button>
+            </div>
+
+        </div>
+
+<% posts.forEach(function(posts){ %>
+    <div class="card">
+        <div class="post">
+            <img src="/images/uploads/<%=posts.image %>" alt="">
+        </div>
+
+        <div class="detail">
+
+            <h4><%= posts.title%></h4>
+            <h5><%=posts.description%></h5>
+
+        </div>
+
+    </div>
+<% }) %>
+
+
+      
+
+
+    </div>
+
+</body>
+
+</html>

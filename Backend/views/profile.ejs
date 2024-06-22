@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../stylesheets/profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="header" style="width: 100%; ">
+
+            <div class="pinters">
+                <a href="/feed">
+                    <h5 style="font-size: 22px; font-weight: 700;">Pintrest</h5>
+                </a>
+            </div>
+            <div class="log">
+                <a href="/profile">
+                    <h5 style="font-size: 18px; ">Profile</h5>
+                </a>
+                <a href="/feed">
+                    <h5 style="font-size: 18px;">Feed</h5>
+                </a>
+                <button class="btn">Logout</button>
+            </div>
+
+        </div>
+
+
+        <form action="/profileupload" method="post" enctype="multipart/form-data" class="formfile">
+            <input type="file" name="file">
+        </form>
+
+        <div class="prof-detail">
+            <div class="profile">
+                <div class="prof" style="overflow: hidden;">
+                    <img src="/images/uploads/<%= user.profileImage %>"
+                        style="object-fit: cover; width: 100%; height: 100%;" alt="">
+
+
+
+                    <div class="pen-icon"
+                        style="background-color: white; width: 30px; height: 30px; border-radius: 50%; position: absolute; top: 193px; left: 643px; cursor: pointer; color: black;">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                            fill="#000000">
+                            <path
+                                d="M200-200h57l391-391-57-57-391 391v57Zm-80 80v-170l528-527q12-11 26.5-17t30.5-6q16 0 31 6t26 18l55 56q12 11 17.5 26t5.5 30q0 16-5.5 30.5T817-647L290-120H120Zm640-584-56-56 56 56Zm-141 85-28-29 57 57-29-28Z" />
+                        </svg>
+
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="detail">
+                <h3 style="text-align: center; margin-top: 10px;">Shivam Maurya</h3>
+                <p style="text-align: center; margin-top: 7px;">@username</p>
+            </div>
+
+            <div class="buttn"
+                style="display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 20px;">
+                <div class="edit">
+                    <button
+                        style="width: 60px; height: 30px; margin-top: 15px; border-radius: 20px; background-color: rgb(70, 68, 68); color: white; border: none; cursor: pointer; ">Edit</button>
+                </div>
+                <div class="add-post">
+                    <a href="/addpost">
+                        <button
+                            style="width: 170px; height: 35px; border-radius: 10px; background-color:red; color: white; border: none; font-size: 15px; cursor: pointer;">Add
+                            Your Post</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="cards">
+
+            <div class="card-img">
+
+                <div class="card" style="overflow: hidden;">
+                    <img src="https://cdn.britannica.com/51/190751-131-B431C216/soccer-ball-goal.jpg?w=840&h=460&c=crop"
+                        style="width: 100%; height: 100%; object-fit: cover;" alt="">
+                </div>
+
+                <div class="post-detail" style="margin-top: 10px;">
+                    <a href="/show/posts">
+                        <h4 style="color:white; margin-left: 3px;">All Post</h4>
+                    </a>
+                    <p style="color: white; margin-left: 8px;">Post</p>
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+    </div>
+
+
+
+    <script src="../javascripts/profile.js"></script>
+</body>
+
+</html>
